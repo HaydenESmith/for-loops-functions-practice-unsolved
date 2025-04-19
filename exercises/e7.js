@@ -6,7 +6,19 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  let bankAct = [];
+  let min = Infinity;
+  let obj = null;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance <= min && array[i].balance > 0) {
+      min = array[i].balance;
+      obj = array[i];
+    }
+  }
+  if (obj !== null) {
+    bankAct.push(obj);
+  }
+  return bankAct;
 }
 
 // === TEST YOURSELF ===
