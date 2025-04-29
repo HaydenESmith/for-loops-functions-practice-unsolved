@@ -11,7 +11,7 @@ export function getClientsWithLetterInName(array, letter) {
   for (let i = 0; i < array.length; i++) {
     let name = array[i].name;
     for (let j = 0; j < name.length; j++) {
-      if (name[j] == letter) {
+      if (name[j] == letter || name[j] == letter.toUpperCase()) {
         actHolders.push(name);
         break;
       }
