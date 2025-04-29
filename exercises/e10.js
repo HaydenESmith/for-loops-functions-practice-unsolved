@@ -9,10 +9,11 @@ export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
   let actHolders = [];
   for (let i = 0; i < array.length; i++) {
-    let name = bankAccounts[i].name;
+    let name = array[i].name;
     for (let j = 0; j < name.length; j++) {
       if (name[j] == letter) {
         actHolders.push(name);
+        break;
       }
     }
   }
